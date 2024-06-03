@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+themessager is a simple Rails app designed to allow the secure and unmonitored exchange of notes or messages between two parts.
