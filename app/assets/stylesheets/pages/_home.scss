@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+.home-card-title {
+  background-color: #840ae9;
+  font-size: 17px;
+  color: #fff;
+  padding: 10px 5px;
+}
+.home-card {
+  margin-top: 20vh;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px gray;
+  border: 1px solid #840ae9;
+}
+.home-card-body {
+  padding: 10px 5px;
+  font-size:15px;
+}
