@@ -4,12 +4,14 @@
       To make sure your message is private and the encryption strong, we have disabled the content box until you generate a secure, unique encryption
       key. To do so, please move your cursor around for at least 5 seconds!
     </p>
-
     <p>Encryption Key - based on mouse X,Y coordinates ( <span class="text-primary" data-message-target="xyRealTime"></span> ):
-    <div data-message-target="randomKey">not available yet</div></p>
-    <%= simple_form_for @message do |f| %>
-      <%= f.input :content, label: 'Please type your note here', id: 'message_content', input_html: { rows: 9 } %>
-      <%= f.button :submit, class: 'btn btn-primary' %>
-    <% end %>
+      <div data-message-target="randomKey">not available yet</div>
+    </p>
+    <div data-message-target="form">
+      <%= simple_form_for @message do |f| %>
+        <%= f.input :content, label: 'Please type your note here', id: 'message_content', input_html: { data: { 'message-target': 'content' }, rows: 9 } %>
+        <%= f.button :submit, id: "btnSubmit",  data: { action: 'click->message#encryptMessage', 'message-target': 'submitBtn'} , class: 'btn btn-primary'%>
+      <% end %>
+    </div>
   </div>
 </div>
